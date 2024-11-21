@@ -385,7 +385,7 @@ Dentro de la tabla, las cuentas de victorias o empates se tendrán en un fragmen
 ```
 
 
-# Lógica de carga/almacenamiento de las variables usando LocalStorage
+## Lógica de carga/almacenamiento de las variables usando LocalStorage
 
 
 ```javascript
