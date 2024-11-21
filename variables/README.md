@@ -496,32 +496,48 @@ btn_jugador.addEventListener('click', function() {
 
 
 ```javascript
-    function mostrarResultado() {
-      if (tiro_computadora > tiro_jugador) {
-        mensaje.textContent = '¡La computadora gana!';
-        mensaje.className = 'alert alert-danger';
-        c_computadora++;
-      } else if (tiro_jugador > tiro_computadora) {
-        mensaje.textContent = '¡El jugador gana!';
-        mensaje.className = 'alert alert-success';
-        c_jugador++;
-      } else {
-        mensaje.textContent = '¡Es un empate!';
-        mensaje.className = 'alert alert-warning';
-        c_empates++;
-      }
-      mensaje.style.display = 'block'; // Mostrar el alert
-    }
+function mostrarResultado() {
+  if (tiro_computadora > tiro_jugador) {
+    mensaje.textContent = '¡La computadora gana!';
+    mensaje.className = 'alert alert-danger';
+    c_computadora++;
+  } else if (tiro_jugador > tiro_computadora) {
+    mensaje.textContent = '¡El jugador gana!';
+    mensaje.className = 'alert alert-success';
+    c_jugador++;
+  } else {
+    mensaje.textContent = '¡Es un empate!';
+    mensaje.className = 'alert alert-warning';
+    c_empates++;
+  }
+  mensaje.style.display = 'block'; // Mostrar el alert
+}
 ```
 
 
 
+### Función para actualizar la tabla de estadísticas
 
 
 ```javascript
+function actualizarTabla() {
+  document.getElementById('cuenta-computadora').textContent = c_computadora;
+  document.getElementById('cuenta-jugador').textContent = c_jugador;
+  document.getElementById('cuenta-empates').textContent = c_empates;
+}
+```
+
+### Guardar los resultados en el localStorage
+
+
+```javascript
+function guardarResultadosEnLocalStorage() {
+  localStorage.setItem('cuenta-computadora', c_computadora);
+  localStorage.setItem('cuenta-jugador', c_jugador);
+  localStorage.setItem('cuenta-empates', c_empates);
+}
 
 ```
 
-
-
+ 
 
