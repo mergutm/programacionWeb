@@ -387,43 +387,60 @@ Dentro de la tabla, las cuentas de victorias o empates se tendrán en un fragmen
 
 ## Lógica de carga/almacenamiento de las variables usando LocalStorage
 
+Se obtiene el valor almacenado previamente en localStorage. Si no hay valor se inicializa con 0.
 
 ```javascript
+// Variables para almacenar resultados
+let c_computadora = parseInt(localStorage.getItem('cuenta-computadora')) || 0;
+let c_jugador = parseInt(localStorage.getItem('cuenta-jugador')) || 0;
+let c_empates = parseInt(localStorage.getItem('cuenta-empates')) || 0;
+```
 
+
+### Valores iniciales para la tabla
+
+Se utilizan las referencias de las celdas de  la tabla para escribir los valores recuperados o iniciales.
+```javascript
+// Actualizar tabla con valores iniciales
+document.getElementById('cuenta-computadora').textContent = c_computadora;
+document.getElementById('cuenta-jugador').textContent = c_jugador;
+document.getElementById('cuenta-empates').textContent = c_empates;
 ```
 
 
 
-
-
+### Valores temporales para los tiros respectivos 
 
 
 ```javascript
-
+// Variables del juego
+let tiro_computadora = 0;
+let tiro_jugador = 0;
 ```
 
 
 
-
+### Referencias a elementos que se deben actuaizar en la página
 
 ```javascript
-
+// Referencias a los elementos del DOM
+const btn_computadora = document.getElementById('btn-computadora');
+const btn_jugador = document.getElementById('btn-jugador');
+const mensaje = document.getElementById('mensaje');
+const card_computadora = document.getElementById('card-computadora');
+const card_jugador = document.getElementById('card-jugador');
 ```
 
 
 
+### función para tirar el dado
 
-
-```javascript
-
-```
-
-
-
-
+Se genera un valor entre 1 y 6
 
 ```javascript
-
+function tirar_dado() {
+  return Math.floor(Math.random() * 6) + 1;
+}
 ```
 
 
