@@ -206,16 +206,54 @@ const z = 30; // Error: z  ya fue declarado
 * **const**: Forma moderna, ámbito de bloque, no permite reasignación ni redeclaración.
 
 
-```javascript
 
+# Almacenamiento de datos en el navegador.
+
+Para guardar variables en el navegador, se suelen usar dos tecnologías de almacenamiento web muy comunes: **LocalStorage** y **SessionStorage**. Ambas permiten almacenar datos en el navegador del usuario de manera sencilla usando pares clave-valor. La diferencia principal entre ambas es:
+
+* **LocalStorage**: Los datos se guardan de manera persistente, incluso si cierras la ventana o reinicias el navegador. La información solo se borra manualmente o a través de JavaScript.
+* **SessionStorage**: Los datos solo se guardan durante la sesión del navegador. Si cierras la ventana o pestaña, se pierden.
+
+## Ejemplo: Guardar Valores en el LocalStorage
+
+
+```javascript
+// Guardar un valor numérico
+let numero = 42;
+localStorage.setItem('miNumero', numero);
+
+// Guardar una cadena de texto
+let cadena = "Hola, esto es un texto";
+localStorage.setItem('miCadena', cadena);
+
+// Guardar una estructura JSON
+let objetoJSON = {
+    nombre: "Juan",
+    edad: 30,
+    activo: true
+};
+// Convertir el objeto JSON a cadena de texto con JSON.stringify()
+localStorage.setItem('miObjetoJSON', JSON.stringify(objetoJSON));
 ```
 
+## Recuperar Variables desde el LocalStorage
 
-
-
+Para recuperar las variables guardadas, se puede usar  el método `getItem`. Cuando se trata de objetos JSON, es necesario utilizar `JSON.parse()`  para convertir la cadena de vuelta a un objeto.
 
 ```javascript
+// Recuperar un valor numérico
+let numeroGuardado = localStorage.getItem('miNumero');
+numeroGuardado = Number(numeroGuardado); // Convertir de string a número
+console.log("Número guardado:", numeroGuardado);
 
+// Recuperar una cadena de texto
+let cadenaGuardada = localStorage.getItem('miCadena');
+console.log("Cadena guardada:", cadenaGuardada);
+
+// Recuperar una estructura JSON
+let objetoJSONGuardado = localStorage.getItem('miObjetoJSON');
+objetoJSONGuardado = JSON.parse(objetoJSONGuardado); // Convertir de string a objeto JSON
+console.log("Objeto JSON guardado:", objetoJSONGuardado);
 ```
 
 
