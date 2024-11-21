@@ -353,6 +353,11 @@ Como ejemplo se muestra el desarrollo de un juego usando  HTML / JavaScript / bo
 * Finalmente, el historial de victorias y empates deberá guardarse en el localStorage del navegador.
 
 
+## Iterfaz creada usando bootstrap
+
+
+
+
   
 ```javascript
 
