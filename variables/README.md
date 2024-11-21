@@ -423,12 +423,13 @@ let tiro_jugador = 0;
 ### Referencias a elementos que se deben actuaizar en la página
 
 ```javascript
-// Referencias a los elementos del DOM
-const btn_computadora = document.getElementById('btn-computadora');
-const btn_jugador = document.getElementById('btn-jugador');
-const mensaje = document.getElementById('mensaje');
-const card_computadora = document.getElementById('card-computadora');
-const card_jugador = document.getElementById('card-jugador');
+ // Referencias a los elementos del DOM
+ const btn_computadora = document.getElementById('btn-computadora');
+ const btn_jugador = document.getElementById('btn-jugador');    
+       btn_jugador.disabled = true; //deshabilitando btn de jugador
+ const mensaje = document.getElementById('mensaje');
+ const card_computadora = document.getElementById('card-computadora');
+ const card_jugador = document.getElementById('card-jugador');
 ```
 
 
@@ -446,27 +447,71 @@ function tirar_dado() {
 
 
 
-
-
+### Evento para el botón de la computadora
 
 ```javascript
+ btn_computadora.addEventListener('click', function() {
+   tiro_computadora = tirar_dado();
+   console.log('Valor de la computadora:', tiro_computadora); // Para debug
+   btn_computadora.textContent = `Computadora tira (?)`; // Mantener oculto
+   card_computadora.textContent = '-'; // Borrar valor anterior
+   card_jugador.textContent = '-';   // Borrar valor anterior del jugador
+   btn_jugador.disabled = false; // Habilitar el botón del jugador
 
+   //Habilitar / deshabilitar botones
+   btn_computadora.disabled = true;
+   btn_jugador.disabled = false;
+ });
 ```
 
 
-
+### Evento para el botón del jugador
 
 
 ```javascript
 
+btn_jugador.addEventListener('click', function() {
+  tiro_jugador = tirar_dado();
+  console.log('Valor del jugador:', tiro_jugador); // Para debug
+
+  // Mostrar valores obtenidos por la computadora y el jugador
+  card_computadora.textContent = tiro_computadora;
+  card_jugador.textContent = tiro_jugador;
+
+  mostrarResultado();
+  actualizarTabla();
+  guardarResultadosEnLocalStorage();
+
+  // Reiniciar botones para la siguiente ronda
+  // btn_jugador.disabled = true;
+  btn_computadora.textContent = `Computadora tira (?)`;
+
+  btn_computadora.disabled = false;
+  btn_jugador.disabled = true;
+});
 ```
 
 
-
+### Función para mostrar el resultado del juego
 
 
 ```javascript
-
+    function mostrarResultado() {
+      if (tiro_computadora > tiro_jugador) {
+        mensaje.textContent = '¡La computadora gana!';
+        mensaje.className = 'alert alert-danger';
+        c_computadora++;
+      } else if (tiro_jugador > tiro_computadora) {
+        mensaje.textContent = '¡El jugador gana!';
+        mensaje.className = 'alert alert-success';
+        c_jugador++;
+      } else {
+        mensaje.textContent = '¡Es un empate!';
+        mensaje.className = 'alert alert-warning';
+        c_empates++;
+      }
+      mensaje.style.display = 'block'; // Mostrar el alert
+    }
 ```
 
 
