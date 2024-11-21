@@ -353,26 +353,39 @@ Como ejemplo se muestra el desarrollo de un juego usando  HTML / JavaScript / bo
 * Finalmente, el historial de victorias y empates deberá guardarse en el localStorage del navegador.
 
 
-## Iterfaz creada usando bootstrap
 
+## Interfaz creada usando bootstrap
 
+<img src = 'https://github.com/mergutm/programacionWeb/blob/main/variables/imgs/dados01.png'>
 
+### Fragmento   para tarjeta (card) de computadora
+```html
+<div class="col col-md-6 text-center">
+     <button id="btn-computadora" class="btn btn-primary w-75">
+         Computadora 
+     </button>
+     <div class="card mt-3 w-100">
+         <div class="card-body">
+             <h4 class="card-title">Computadora</h4>
+             <p id="card-computadora" class="card-text display-5">?</p>
+         </div>
+     </div>
+</div>
+```
 
-  
-```javascript
-
+Dentro de la tabla, las cuentas de victorias o empates se tendrán en un fragmento como:
+```html
+<tbody>
+  <tr>
+    <td id="cuenta-computadora">0</td>
+    <td id="cuenta-jugador">0</td>
+    <td id="cuenta-empates">0</td>
+  </tr>
+</tbody>
 ```
 
 
-
-
-
-```javascript
-
-```
-
-
-
+# Lógica de carga/almacenamiento de las variables usando LocalStorage
 
 
 ```javascript
