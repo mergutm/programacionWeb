@@ -257,35 +257,103 @@ console.log("Objeto JSON guardado:", objetoJSONGuardado);
 ```
 
 
+# Eliminar Valores desde el LocalStorage 
 
-
+Para eliminar un elemento específico del LocalStorage, se puede usar `removeItem`. Si se  desea borrar todo el almacenamiento, se puede usar `clear`.
 
 ```javascript
+// Eliminar un solo elemento
+localStorage.removeItem('miNumero');
+
+// Limpiar todo el LocalStorage
+localStorage.clear();
+```
+
+## Métodos para usar localStorage
+* `setItem(clave, valor)`: Guarda un valor en el LocalStorage.
+* `getItem(clave)`: Recupera un valor del LocalStorage.
+* `removeItem(clave)`: Elimina un valor específico del LocalStorage.
+* `clear()`: Elimina todos los valores del LocalStorage.
+
+```javascript
+// Guardar diferentes tipos de datos en LocalStorage
+localStorage.setItem('miNumero', 100);                // Número
+localStorage.setItem('miCadena', 'Hola Mundo');       // Cadena
+localStorage.setItem('miObjetoJSON', JSON.stringify({ // Objeto JSON
+    nombre: "Pedro",
+    edad: 25,
+    pais: "España"
+}));
+
+// Recuperar los datos guardados
+let numeroRecuperado = Number(localStorage.getItem('miNumero'));
+let cadenaRecuperada = localStorage.getItem('miCadena');
+let objetoJSONRecuperado = JSON.parse(localStorage.getItem('miObjetoJSON'));
+
+// Mostrar los datos recuperados
+console.log('Número Recuperado:', numeroRecuperado);
+console.log('Cadena Recuperada:', cadenaRecuperada);
+console.log('Objeto JSON Recuperado:', objetoJSONRecuperado);
 
 ```
 
-
-
-
-
-```javascript
-
-```
-
-
-
-
-
+## Ejemplo usando SessionStorage
 
 
 ```javascript
+// Guardar diferentes tipos de datos en sessionStorage
+sessionStorage.setItem('miNumero', 42);                 // Número
+sessionStorage.setItem('miCadena', 'Hola Session');     // Cadena
+sessionStorage.setItem('miObjetoJSON', JSON.stringify({ // Objeto JSON
+    nombre: "Luis",
+    edad: 29,
+    pais: "Colombia"
+}));
 
+// Recuperar los datos guardados
+let numeroRecuperado = Number(sessionStorage.getItem('miNumero'));
+let cadenaRecuperada = sessionStorage.getItem('miCadena');
+let objetoJSONRecuperado = JSON.parse(sessionStorage.getItem('miObjetoJSON'));
+
+// Mostrar los datos recuperados
+console.log('Número Recuperado desde sessionStorage:', numeroRecuperado);
+console.log('Cadena Recuperada desde sessionStorage:', cadenaRecuperada);
+console.log('Objeto JSON Recuperado desde sessionStorage:', objetoJSONRecuperado);
 ```
 
 
+## Métodos para usar SessionStorage
+* `setItem(clave, valor)`: Guarda un valor en el SessionStorage.
+* `getItem(clave)`: Recupera un valor del SessionStorage.
+* `removeItem(clave)`: Elimina un valor específico del SessionStorage.
+* `clear()`: Elimina todos los valores del SessionStorage.
+
+# Diferencias Clave entre localStorage y sessionStorage
+
+| Característica | `localStorage`                                         | `sessionStorage`                                         |
+|----------------|--------------------------------------------------------|----------------------------------------------------------|
+| Persistencia   | Persistente (permanece hasta que se borre manualmente) | Solo durante la sesión (se elimina al cerrar la pestaña) |
+| Capacidad      | Aproximadamente 5-10 MB según el navegador             | Aproximadamente 5 MB según el navegador                  |
+| Accesibilidad  | Disponible en todas las pestañas y ventanas abiertas   | Solo accesible en la pestaña o ventana actual            |
 
 
 
+# Juego de dados
+
+Como ejemplo se muestra el desarrollo de un juego usando  HTML / JavaScript / bootstrap. 
+
+* El juego consiste en lanzar un dado por parte del **programa** (se muestra en la consola para fines de debug), pero este valor queda oculto hasta que tira el dado el **jugador**.  
+* El valor de tirado por el **progama** se representa en un div de tipo **card**, así mismo se tiene otro div para el **jugador**.
+* Se tienen 2 botones, uno para el programa y otro para el jugador. Alternadamente tira el programa y el jugador (sólo uno a la vez).
+* Tira primero el programa, este valor queda oculto (pero se muestra en consola). 
+* Al hacer click sobre cada botón se genera un valor aleatorio.
+* En un componente alert de bootstrap se muestra quien ganó (el que obtuvo el valor más alto) o si empataron.
+* El resultado se muestra para ambas partes en los elementos card después de que tira el **jugador**.
+* En una tabla, se muestra cuántos juegos ha ganado el **programa**, el **jugador** y el número de **empates**.
+* Finalmente, el historial de victorias y empates deberá guardarse en el localStorage del navegador.
+
+
+  
 ```javascript
 
 ```
