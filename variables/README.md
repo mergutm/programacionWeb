@@ -540,4 +540,8 @@ function guardarResultadosEnLocalStorage() {
 ```
 
  
+# Screenshots de la aplicación funcionando
 
+<img src = 'https://github.com/mergutm/programacionWeb/blob/main/variables/imgs/dados02.png'>
+
+<img src = 'https://github.com/mergutm/programacionWeb/blob/main/variables/imgs/dados03.png'>
