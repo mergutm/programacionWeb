@@ -174,3 +174,6 @@ Aquí hay un ejemplo HTML con estilos CSS para las clases descritas:
 </body>
 </html>
 ```
+
+La siguiente imagen muestra el resultado de aplicar los estilos a diferentes elementos div. 
+<img src='https://raw.githubusercontent.com/mergutm/programacionWeb/refs/heads/main/bordes/imgs/bordes.png'>
