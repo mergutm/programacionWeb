@@ -16,7 +16,7 @@ Tiene entre otros, los siguientes beneficios:
 
 # Herramientas para manejo de versiones
 
-* **Git**: Es el sistema de control de versiones más utilizado en la actualidad. Es de código abierto, distribuido y muy flexible.
+* **Git**: Es el sistema de control de versiones más utilizado en la actualidad. Es de código abierto, distribuido y muy flexible. Git fue creado en 2005 por Linux, mientras que GitHub fue creado en 2008 y le pertenece a Microsoft.
 * **SVN (Subversion)**: Otro sistema de control de versiones popular, aunque menos flexible que Git.
 * **Mercurial**: Una alternativa a Git, conocido por su simplicidad y facilidad de uso.
 * **Perforce** y **TFS**: Soluciones corporativas.
