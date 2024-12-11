@@ -1,5 +1,13 @@
 # Comandos de git
 
+## Contenido
+
+* ![Creación de un repositorio](https://github.com/mergutm/programacionWeb/blob/main/git/comandos.md#creaci%C3%B3n-de-un-repositorio)
+* ![código en python](https://github.com/mergutm/programacionWeb/blob/main/git/comandos.md#c%C3%B3digo-de-una-cnn)
+* ![lista de comandos](https://github.com/mergutm/programacionWeb/blob/main/git/comandos.md#lista-de-comandos)
+* ![Generador de tablas ](https://www.tablesgenerator.com/markdown_tables)
+
+
 ## Creación de un repositorio
 
 Para crear un repositorio usar el comando `git init`, enseguida un ejemplo:
