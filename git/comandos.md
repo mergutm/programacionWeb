@@ -20,3 +20,34 @@ Inicializado repositorio Git vacío en /home/salas/Descargas/prueba/.git/
 ```
 
 
+## Código de una CNN
+
+```python
+class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
+               'dog', 'frog', 'horse', 'ship', 'truck']
+
+plt.figure(figsize=(10,10))
+for i in range(25):
+    plt.subplot(5,5,i+1)
+    plt.xticks([])
+    plt.yticks([])
+    plt.grid(False)
+    plt.imshow(train_images[i])
+    # The CIFAR labels happen to be arrays, 
+    # which is why you need the extra index
+    plt.xlabel(class_names[train_labels[i][0]])
+plt.show()
+```
+
+
+<img src="https://www.tensorflow.org/tutorials/images/cnn_files/output_K3PAELE2eSU9_0.png?hl=es-419">
+
+## Lista de comandos
+
+| Comando de git | Descripcion                                       | Ejemplo  |
+|----------------|---------------------------------------------------|----------|
+| git init       | Creación de un repositorio                        | git init |
+| git pull       | Obtención de la ´última versión de un repositorio | asd      |
+
+
+
