@@ -177,4 +177,77 @@ To https://github.com/mergutm/programacionWeb.git
    dc50bb8..07c323d  main -> main
 ```
 
+# Merge desde noticias
 
+`*` indica que se usa la rama `main`
+```bash
+$ git branch
+* main
+  menu/noticias
+
+```
+
+### Cambio a rama de noticias
+
+```bash
+$ git checkout  menu/noticias
+Switched to branch 'menu/noticias'
+Your branch is up to date with 'origin/menu/noticias'.
+```
+
+
+## Haciendo el cambio desde main
+```bash
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+```
+
+
+```bash
+
+$ git merge menu/noticias 
+Merge made by the 'ort' strategy.
+ git/pruebas/noticias.html | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+ create mode 100644 git/pruebas/noticias.html
+
+```
+
+
+
+
+
+```bash
+```
+
+
+
+```bash
+```
+
+
+
+```bash
+```
+
+
+
+```bash
+```
+
+
+
+```bash
+```
+
+
+
+```bash
+```
+
+
+
+```bash
+```
