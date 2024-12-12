@@ -97,6 +97,7 @@ $ git branch
 
 ```bash
 $ git add noticias.html 
+
 $ git commit -m "new noticias"
 [menu/noticias ecba4e0] new noticias
  1 file changed, 11 insertions(+)
@@ -146,5 +147,34 @@ M	git/pruebas/README.md
 M	git/pruebas/index.html
 Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
+
+
+$ ls
+css  imgs  index.html  README.md
 ```
+
+## Subir cambios a main
+
+```bash
+$ git add .
+
+$ git commit -m "main push"
+[main 07c323d] main push
+ 3 files changed, 118 insertions(+)
+ create mode 100644 git/pruebas/css/estilo.css
+
+$ git push
+Username for 'https://github.com': merg@gs.utm.mx
+Password for 'https://merg@gs.utm.mx@github.com': 
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 1.69 KiB | 576.00 KiB/s, done.
+Total 8 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/mergutm/programacionWeb.git
+   dc50bb8..07c323d  main -> main
+```
+
 
