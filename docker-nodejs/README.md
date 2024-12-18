@@ -140,3 +140,28 @@ Esto proporciona acceso a una línea de comandos interactiva.
 docker build -t ubuntu-node23 .
 ```
 
+
+
+
+```bash
+docker run -p 3010:3000 -v $(pwd)/code:/code  --restart always --name dev-node-app ubuntu-node23
+```
+# Archivo YML
+
+```yml
+services:
+  app:
+    build: .
+    container_name: ubuntu-nodejs-dev
+    stdin_open: true       # Keep the container's standard input open
+    tty: true              # Allocate a pseudo-TTY
+    restart: always        # Ensure the container restarts automatically
+    ports:
+      - 3020:3000
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./code:/code
+```
+
+
