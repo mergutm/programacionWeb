@@ -140,13 +140,18 @@ Esto proporciona acceso a una línea de comandos interactiva.
 docker build -t ubuntu-node23 .
 ```
 
+### Creación de un contenedor por línea de comandos
 
-
-
+Este contenedor se reinicia constantemente, a menos que se lance y ejecute alguna instruccion que lo mantenga activo.
 ```bash
 docker run -p 3010:3000 -v $(pwd)/code:/code  --restart always --name dev-node-app ubuntu-node23
 ```
+
+
 # Archivo YML
+
+El siguiente archivo `docker-compose.yml` corrige la situación y permite tener activo el contenedor. 
+Hace uso de la imagen previamente creada. Si hay cambios se vuelve a construir `build .`. 
 
 ```yml
 services:
