@@ -44,10 +44,10 @@ Agregar botones para el evento de mostrar dos tarjetas
 
 Hasta este punto, se debe tener 
 
-![alt text](images/botones.png)
+![alt text](https://raw.githubusercontent.com/mergutm/programacionWeb/refs/heads/main/tailwind/images/botones.png)
 
-<img src="./images/botones.png">
-
+<img src="https://raw.githubusercontent.com/mergutm/programacionWeb/refs/heads/main/tailwind/images/botones.png">
+https://raw.githubusercontent.com/mergutm/programacionWeb/refs/heads/main/tailwind/images/botones.png
 
 ```html
    
