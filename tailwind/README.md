@@ -23,8 +23,10 @@
 
 ```html
 <body class="bg-gradient-to-r from-blue-100 via-blue-100 to-fuchsia-200 bg-rose-50 place-items-center flex-col space-y-28">
-
 ```
+ 
+ Puedes ver más ejemplos en:
+ <a href='https://tailwindcss.com/docs/background-clip#cropping-to-text'> degradados </a>
 
 
 ## Agregar botones al inicio del body
@@ -40,7 +42,9 @@ Agregar botones para el evento de mostrar dos tarjetas
     </div>
 ```
 
+Hasta este punto, se debe tener 
 
+<img src='images/botones.png'>
 
 
 ```html
