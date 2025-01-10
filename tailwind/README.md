@@ -44,7 +44,7 @@ Agregar botones para el evento de mostrar dos tarjetas
 
 Hasta este punto, se debe tener 
 
-<img src='images/botones.png'>
+<img src='./images/botones.png'>
 
 
 ```html
