@@ -5,7 +5,6 @@
 Archivo para crear los contenedores
 
 ```yml
-version: '3.8'
 services:
 
   mysql:
